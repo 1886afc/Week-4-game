@@ -13,10 +13,9 @@ var wins = 0,
 	randomNum = "",
 	crystalNum = [];
 
-$("#randomNum").html(randomNum);
-$("#Wins").html("Wins: " + wins);
-$("#Losses").html("Losses: " + losses);
-$("#total").html("Total: " + yourScore);
+
+
+
 function startGame() {
 //random Number
 randomNum = Math.floor(Math.random() * 120) + 19;
@@ -47,7 +46,7 @@ console.log("total " + yourScore);
 for (var i = 0; i < crystalNum.length; i++) {
 	var imageCrystal = $("<img>");
 	imageCrystal.addClass("crystal-image");
-	imageCrystal.attr("src", "https://www.google.com/imgres?imgurl=http%3A%2F%2Fwww.minerals.net%2FMineralImages%2Femerald-elongated-single-chivor-colombia.jpg&imgrefurl=http%3A%2F%2Fwww.minerals.net%2FImage%2F2%2F194%2FEmerald.aspx&docid=GhPXNz8Hbc2e7M&tbnid=TqNDRtzDVjeGEM%3A&vet=1&w=334&h=427&safe=off&bih=876&biw=870&q=crystal%20images&ved=0ahUKEwiB4tnZhq_SAhXLRyYKHWsQCs4QMwhOKAgwCA&iact=mrc&uact=8");
+	imageCrystal.attr("src", "../images/crystal.png");
 	imageCrystal.attr("data-crystalvalue", crystalNum[i]);
 	$("#crystals").append(imageCrystal);
 }
@@ -67,7 +66,10 @@ $(".crystal-image").on("click", function() {
 		reset()
 	}
 });
-
+$("#randomNum").html(randomNum);
+$("#Wins").html("Wins: " + wins);
+$("#Losses").html("Losses: " + losses);
+$("#total").html("Total: " + yourScore);
 
 
 
